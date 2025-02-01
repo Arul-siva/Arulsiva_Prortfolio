@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../image/profile.png";
+import profile from "../image/my profile pic.jpg";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
@@ -8,7 +8,7 @@ const Home = () => {
   return (
    <>
     <section className="home-section py-5 mt-5">
-      <div className="container-fluid ">
+      <div className="container ">
         <div className="row align-items-center mx-lg-5 mx-md-4 mx-3">
           <div className="col-md-6 col-12 ">
             <div className="">

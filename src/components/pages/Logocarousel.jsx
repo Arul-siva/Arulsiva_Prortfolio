@@ -29,7 +29,7 @@ export default function SimpleSlider() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -95,12 +95,16 @@ export default function SimpleSlider() {
   ];
 
   return (
-    < >
-     <div className="container-fluid">
+    < > 
+    <div className="home-section">
+    <div className="container ">
       <div className="row">
         <div className="col-12 p-0">
-        <div className="py-lg-5 py-3 logocarousel home-section">
+        <div className="py-lg-5 py-3 logocarousel">
         <h2 className="text-center py-3">hello </h2>
+        <div className="">
+          
+        </div>
         <Slider {...settings} className="overflow-hidden">
           {data.map((value, index) => (
             <div className="logo-card " key={index}>
@@ -115,6 +119,7 @@ export default function SimpleSlider() {
         </div>
       </div>
      </div>
+    </div>
     </>
   );
 }
