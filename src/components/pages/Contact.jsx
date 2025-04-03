@@ -8,6 +8,7 @@ import contact from "../image/contact.png";
 import { useState } from "react";
 import emailjs from 'emailjs-com';
 import { useForm } from "antd/es/form/Form";
+import { Link } from "react-router-dom";
 const { TextArea } = Input;
 const Contact = () => {
 
@@ -47,18 +48,18 @@ const handleSubmit = ()=>{
               <div className="d-flex  justify-content-center">
                 <img src={contact} className="ing-fluid w-100 pb-4" alt="" />
               </div>{" "}
-              <h3>hello</h3>
+              <h3>Arul Siva J</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perspiciatis voluptates culpa, aliquam necessitatibus o
               </p>
-              <p>Phone : 37634 <br /> Email : mfssbdsh
+              <p>Phone : 8098185278 <br /> Email : arulsivajayabal@gmail.com
               </p>
-              <div className="">
-                <p>Find with me</p>
-                <FaLinkedinIn className="social-icon mx-2" />
-                <IoLogoGithub className="social-icon mx-2" />
-                <IoIosMail className="social-icon mx-2" />
+              <div className="Find_with_me">
+                <p>Find with me </p>
+                <Link to={"https://www.linkedin.com/in/arulsiva-jayabal-60b1b531b"} target="_blank"><FaLinkedinIn className="social-icon mx-2" /></Link>
+                <Link to={"https://github.com/Arul-siva"} target="_blank"><IoLogoGithub className="social-icon mx-2" /></Link>
+                <a href="mailto:example@email.com" target="_blank" rel="noopener noreferrer"><IoIosMail className="social-icon mx-2" /></a>
               </div>
             </div>
           </div>
@@ -148,7 +149,7 @@ const handleSubmit = ()=>{
                   />
                 </Form.Item>
                 <Form.Item>
-                  <Button htmlType="submit" className="w-100">
+                  <Button htmlType="submit" className="w-100 p-3">
                     Register
                   </Button>
                 </Form.Item>

@@ -1,4 +1,4 @@
-import React, { useRef ,useContext } from "react";
+import React, { useRef  } from "react";
 import { ThemeContext } from './pages/ThemeContext'
 const Header = ({ scrollToSection }) => {
 
