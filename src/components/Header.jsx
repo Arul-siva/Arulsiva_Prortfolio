@@ -3,10 +3,10 @@ import { ThemeContext } from './pages/ThemeContext'
 const Header = ({ scrollToSection }) => {
 
   return (
-    <nav  className={`navbar navbar-expand-lg  shadow fixed-top mb-5 navbar-light bg-light `}>
+    <nav  className={`navbar navbar-expand-lg  shadow fixed-top mb-5 navbar-light  home-section border-bottom  border-secondary`}>
       <div className="container">
-        <a className="navbar-brand fs_18 fw-600" href="#!" >
-          INBIO
+        <a className="navbar-brand fs_18 fw-700" href="#!" >
+          Arulsiva
         </a>
         <button
           className="navbar-toggler"

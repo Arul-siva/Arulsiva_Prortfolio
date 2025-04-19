@@ -10,6 +10,7 @@ import mongo from "../image/mongodb.svg";
 import mysql from "../image/mysql.svg";
 import git from "../image/git.svg";
 import php from "../image/PHP-logo.svg.png";
+import laravel from "../image/laravel-2.svg";
 
 export default function SimpleSlider() {
   var settings = {
@@ -76,12 +77,16 @@ export default function SimpleSlider() {
       name: "React",
     },
     {
-      img: mongo,
-      name: "Mongo DB",
+      img: laravel,
+      name: "Laravel",
     },
     {
       img: mysql,
       name: "My Sql",
+    },
+    {
+      img: mongo,
+      name: "Mongo DB",
     },
     {
       img: git,
@@ -96,18 +101,18 @@ export default function SimpleSlider() {
 
   return (
     < > 
-    <div className="home-section">
+    <div className="home-section pb-4">
     <div className="container ">
       <div className="row">
         <div className="col-12 p-0">
-        <div className="py-lg-5 py-3 logocarousel">
-        <h2 className="text-center py-3">hello </h2>
+        <div className="pb-5  logocarousel">
+        <h2 className="text-center py-3 text-white">My Skills </h2>
         <div className="">
           
         </div>
         <Slider {...settings} className="overflow-hidden">
           {data.map((value, index) => (
-            <div className="logo-card " key={index}>
+            <div className="logo-card  align-items-center" key={index}>
               <div className=" logo-img d-flex align-items-center justify-content-center ">
                 <img src={value.img} className="img-fluid " alt="" />
               </div>
