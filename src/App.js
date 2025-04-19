@@ -7,6 +7,7 @@ import Tab from "./components/pages/Tab";
 import Logocarousel from "./components/pages/Logocarousel";
 import Project from "./components/pages/Project";
 import Contact from "./components/pages/Contact";
+import SrollTop from "./components/pages/SrollTop";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -57,6 +58,7 @@ const App = () => {
         <Contact />
       </div>
       <Footer />
+      <SrollTop />
     </div>
   );
 };
