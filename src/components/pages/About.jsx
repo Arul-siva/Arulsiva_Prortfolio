@@ -17,7 +17,7 @@ const About = () => {
             <div className="boxshadow_c9f31d about_sec p-lg-5 p-md-3 p-3 mt-3 mb-5 border_c9f31d rounded-4 bg-dark">
               <h2 className="mb-4 text-warning">About Me</h2>
               <p>
-                <strong>My Journey from BPO to Web Development: Finding My True Passion</strong>
+                <strong>My Journey from BPO to Front-end Development: Finding My True Passion</strong>
               </p>
               <hr className="border-warning" />
               <p>
@@ -29,7 +29,7 @@ const About = () => {
                 This leap into the unknown became a turning point — I discovered coding and instantly clicked with it.
               </p>
               <p>
-                The joy of solving problems, building websites, and bringing ideas to life led me to join <strong>HEPL</strong> as a web developer, kick-starting my tech career.
+                The joy of solving problems, building websites, and bringing ideas to life led me to join <strong>HEPL</strong> as a Front-end developer, kick-starting my tech career.
               </p>
               <p>
                 Today, I continue pushing limits, crafting <strong>responsive websites</strong> and delivering <strong>innovative solutions</strong>.

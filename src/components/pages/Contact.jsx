@@ -58,10 +58,7 @@ const Contact = () => {
                 <img src={contact} className="img-fluid rounded" alt="Contact" />
               </div>
               <h3 className="contact-name">Arul Siva J</h3>
-              <p className="contact-desc">
-                Passionate web developer with a strong focus on creating modern, responsive, and user-friendly websites. I specialize in turning ideas into digital experiences that are both functional and visually appealing.
-                Whether you're building a personal project or a business platform, I’m here to help you bring your vision to life.
-              </p>
+             
               <p className="contact-info">
                 Phone : 8098185278 <br /> Email : arulsivajayabal@gmail.com
               </p>

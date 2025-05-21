@@ -51,16 +51,18 @@ export default function Experience() {
                     </h2>
 
                     <p style={{ lineHeight: '1.7', marginBottom: '10px' }}>
-                      Developed responsive websites using HTML, CSS, Bootstrap, JavaScript, React.js, WordPress, and PHP — optimized for mobile and desktop platforms to enhance user experience.
+                      Developed and launched responsive, high-performance websites to improve user experience across all devices.
+                      Integrated REST APIs, enhancing data flow and feature efficiency, which led to a 60% reduction in load time and improved user experience.
                     </p>
 
                     <p style={{ lineHeight: '1.7', marginBottom: '10px' }}>
-                      Integrated RESTful APIs using React, improved data flow, and maintained code integrity with Git version control.
+                      Successfully Delivered 5+ client projects (e-commerce, business, and WordPress), all completed on time with over 90% client satisfaction .
                     </p>
 
                     <p style={{ lineHeight: '1.7', marginBottom: '10px' }}>
-                      Delivered over <strong>5+ projects</strong> — including e-commerce platforms, business websites, and WordPress solutions.
-                    </p>  
+                      Used Git for version control, reducing merge conflicts by 90% and maintaining high code quality standards.
+                      Collaborating with team members, and clients, to gather requirements and deliver high-quality projects on time.
+                    </p>
 
                     <p style={{ lineHeight: '1.7' }}>
                       Collaborated with teams and clients to gather requirements and ensure on-time, high-quality delivery.

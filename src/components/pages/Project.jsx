@@ -37,10 +37,10 @@ const Project = () => {
                                     className="timeline_right p-lg-4 p-md-3 p-3 rounded-4 shadow-sm bg-dark text-white"
                                 >
                                     <div className="mb-4">
-                                        <p className="text-justify lh-lg">
+                                        <p className="text-justify">
                                             Developed a responsive website using <strong>HTML, CSS, JavaScript, Bootstrap, and PHP</strong> for HEPL, a business solutions provider.
                                             Integrated <strong>live streaming functionality</strong> for real-time event monitoring and incorporated interactive animations to enhance the user experience.
-                                            Monitored website performance and implemented <strong>code optimizations</strong>, improving both website speed and overall functionality.
+                                            
                                         </p>
                                     </div>
 
@@ -112,7 +112,7 @@ const Project = () => {
                                 </div>
 
                             </div>
-                            <div
+                            {/* <div
                                 data-w-id="d5abcf1f-3370-3eea-ccfd-66f076babfe0"
                                 class="timeline_item">
                                 <div
@@ -206,7 +206,7 @@ const Project = () => {
                                 </div>
 
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

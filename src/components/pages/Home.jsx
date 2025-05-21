@@ -44,7 +44,7 @@ const Home = () => {
               </h1>
 
               <h1 className="c_c9f31d d-flex flex-wrap">
-                {"FullStack Developer.".split("").map((char, index) => (
+                {"Junior Software Engineer.".split("").map((char, index) => (
                   <motion.span
                     key={index}
                     custom={index}
@@ -64,7 +64,7 @@ const Home = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2, duration: 1 }}
               >
-                I design and develop dynamic web solutions, blending clean code with creative design to enhance digital experiences.
+                I build efficient and responsive web applications with a strong focus on clean code, user experience, and continuous learning.
               </motion.p>
 
               <a href="Arulsiva-Software Engineer (1).pdf" download>
