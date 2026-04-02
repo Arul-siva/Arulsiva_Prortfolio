@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="h-1 w-full bg-gray-700 rounded-full overflow-hidden">
                 <div className="h-full bg-accent w-3/4"></div>
-              </div>
+              </div> 
             </motion.div>
           </div>
         </motion.div>
