@@ -40,6 +40,14 @@ const FAQ = () => {
     setOpenQuestion(openQuestion === id ? null : id);
   };
 
+  const scrollToContactForm = () => {
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="py-20 px-6">
       <div className="container mx-auto">
@@ -57,7 +65,11 @@ const FAQ = () => {
               {/* <p className="text-gray-400 mb-6">
                 Work With People And Brands Worldwide.
               </p> */}
-              <button className="bg-gradient-to-r from-accent to-green-400 text-primary font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300">
+              <button
+                type="button"
+                onClick={scrollToContactForm}
+                className="bg-gradient-to-r from-accent to-green-400 text-primary2 font-semibold px-8 py-3 rounded-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300"
+              >
                 Contact Us Now
               </button>
             </div>

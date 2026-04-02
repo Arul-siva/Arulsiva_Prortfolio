@@ -1,10 +1,13 @@
 import { Briefcase, Code, GraduationCap, User, Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
-
+import golftripzImage from '../../images/golftripz.png';
+import lsm from '../../images/lms.png';
+import fruitingImage from '../../images/fruiting.png';
+import resumePdf from '../../images/Arulsiva - Software Engineer..pdf';
 export const personalInfo = {
   name: "Arulsiva",
   role: "Software Engineer",
   intro: "I’m a software engineer specializing in building scalable, high-performance web applications across the frontend and backend. I focus on writing clean, maintainable code and developing solutions that solve real-world problems.",
-  resumeUrl: "https://arulsiva-prortfolio.vercel.app/Arulsiva-Software%20Engineer%20(1).pdf",
+  resumeUrl: resumePdf,
   profileImage: "https://arulsiva-prortfolio.vercel.app/static/media/my%20profile%20pic.64077449059229659831.jpg",
   heroImage: "https://arulsiva-prortfolio.vercel.app/static/media/webdev.04a6f1c02f44d7f4b435.jpg",
   email: "arulsivajayabal@gmail.com",
@@ -81,7 +84,7 @@ export const projects = [
     date: "2025–2026",
     description:
       "Multi-country golf course booking platform with real-time pricing, availability, and OTP authentication.",
-    image: "/images/project-reference.png",
+    image: golftripzImage,
     link: "#",
     overview:
       "Golftripz is a comprehensive multi-country golf course booking platform designed for golf enthusiasts to discover, compare, and reserve tee times with ease. The application simplifies the booking experience by combining real-time availability, dynamic pricing, and flexible booking options under a single intuitive interface.\n\nThe platform supports both registered users and guest checkouts, offering OTP-based authentication for secure and quick access. It enables users to book single-day rounds or multi-day golf holiday packages, complete with itinerary planning and reservation management. Built with scalability and performance in mind, Golftripz delivers a smooth, SEO-optimized experience while handling complex booking logic across multiple regions.",
@@ -99,8 +102,8 @@ export const projects = [
     date: "2023",
     description:
       "Fruit-selling e-commerce platform with admin dashboard, real-time updates, and customer reviews.",
-    image: "/images/project-reference.png",
-    link: "#",
+    image: fruitingImage,
+    link: 'https://fruitingdesert.netlify.app/',
     overview:
       "Fruiting Dessert is a modern e-commerce web application built to provide customers with a seamless and engaging online fruit shopping experience. The platform focuses on simplicity, speed, and responsiveness, enabling users to browse products, view details, place orders, and submit reviews effortlessly.\n\nThe system includes a powerful admin dashboard that allows administrators to manage products, pricing, availability, and customer feedback in real time. Designed with scalability in mind, the application supports real-time updates, ensuring that inventory and content remain consistent across the platform. The project emphasizes performance optimization, user engagement, and clean UI/UX design.",
     challenge:
@@ -135,7 +138,7 @@ export const projects = [
   date: "2025",
   description:
     "Online learning platform with course management, OTP-based authentication, and detailed test analytics for competitive exams.",
-  image: "/images/project-reference.png",
+  image: lsm,
   link: "https://lms.otademo.com/login",
   overview:
     "The Learning Management System (LMS) is a comprehensive education platform designed to support students preparing for competitive exams such as NEET and JEE. The application provides a structured learning experience by combining course content, online assessments, performance tracking, and user analytics within a single unified system.\n\nThe platform features a modern React.js frontend integrated with a Laravel REST API backend, ensuring smooth data flow and scalability. Students can securely register and log in using OTP-based mobile number authentication, browse available courses, take chapter-wise and topic-wise tests, and track their learning progress through detailed analytics. The system emphasizes usability, performance insights, and exam-oriented learning workflows.",
@@ -144,23 +147,22 @@ export const projects = [
   solution:
     "Developed a React.js frontend integrated with a Laravel REST API backend. Implemented OTP-based mobile authentication, dynamic course and test management, chapter-wise and topic-wise online exams, real-time time tracking per question, and comprehensive analytics including scores, accuracy, test duration, and reattempt functionality."
 },
- {
-    id: 5,
-    title: "IB Order Processing Tool",
-    category: "Enterprise Application",
-    client: "Internal Business (IB)",
-    date: "2024",
-    description:
-      "Enterprise order processing and approval system with role-based access and multi-level ticket approvals.",
-    image: "/images/project-reference.png",
-    link: "#",
-    overview:
-      "The IB Order Processing Tool is a full-scale enterprise application designed to streamline and automate the complete order lifecycle within an organization. The platform connects multiple departments including Sales, General Managers, Supervisors, Planning teams, and Factory units under a single unified system. It ensures transparency, accountability, and structured workflows for every order processed.\n\nThe application eliminates manual dependencies by introducing a digital ticket-based system where orders move through predefined approval stages. Each role has clearly defined permissions, ensuring that approvals and rejections are tracked accurately. The system improves operational efficiency, minimizes human error, and provides real-time visibility into order status across departments.",
-    challenge:
-      "Manual order approvals caused delays, limited visibility, and higher error rates. Ensuring secure approvals across multiple departments while maintaining accountability was a key challenge.",
-    solution:
-      "Built a role-based login and approval workflow using React, Laravel, PHP, and MySQL. Implemented step-by-step ticket approvals and automated order completion only after final factory approval, improving efficiency and reducing ticket errors by approximately 40%."
-  },
+//  {
+//     id: 5,
+//     title: "IB Order Processing Tool",
+//     category: "Enterprise Application",
+//     client: "Internal Business (IB)",
+//     date: "2024",
+//     description:
+//       "Enterprise order processing and approval system with role-based access and multi-level ticket approvals.",
+//     image: "/images/project-reference.png",
+//     link: "#",
+//     overview:
+//       "The IB Order Processing Tool is a full-scale enterprise application designed to streamline and automate the complete order lifecycle within an organization. The platform connects multiple departments including Sales, General Managers, Supervisors, Planning teams, and Factory units under a single unified system. It ensures transparency, accountability, and structured workflows for every order processed.\n\nThe application eliminates manual dependencies by introducing a digital ticket-based system where orders move through predefined approval stages. Each role has clearly defined permissions, ensuring that approvals and rejections are tracked accurately. The system improves operational efficiency, minimizes human error, and provides real-time visibility into order status across departments.",
+//     challenge:
+//       "Manual order approvals caused delays, limited visibility, and higher error rates. Ensuring secure approvals across multiple departments while maintaining accountability was a key challenge.",
+//     solution:
+//       "Built a role-based login and approval workflow using React, Laravel, PHP, and MySQL. Implemented step-by-step ticket approvals and automated order completion only after final factory approval, improving efficiency and reducing ticket errors by approximately 40%."
+//   },
 
 ];
-

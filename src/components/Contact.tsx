@@ -1,10 +1,98 @@
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, Send, User, MessageSquare, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 import GradientText from './GradientText';
 
+const EMAILJS_SERVICE_ID = 'service_udtq7b4';
+const EMAILJS_TEMPLATE_ID = 'template_2vwvkge';
+const EMAILJS_PUBLIC_KEY = 'YCdFFCVYl553Bbev1';
+
+type ContactFormData = {
+  name: string;
+  phone: string;
+  email: string;
+  message: string;
+};
+
+const inputClassName =
+  'w-full bg-gray-800 text-white pl-12 pr-4 py-3 border border-gray-700 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all placeholder-gray-400';
+
+const textareaClassName = `${inputClassName} resize-none`;
+
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error';
+    message: string;
+  } | null>(null);
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubmitStatus(null);
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          user_name: formData.name,
+          user_email: formData.email,
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          phone_number: formData.phone,
+          message: formData.message,
+          reply_to: formData.email,
+          to_name: personalInfo.name,
+          to_email: personalInfo.email,
+        },
+        {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Your message has been sent successfully.',
+      });
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Unable to send your message right now. Please try again.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24   relative">
       <div className="container mx-auto px-6 lg:px-12">
@@ -78,22 +166,36 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:w-2/3"
           >
-            <form className="bg-secondary2 p-8 lg:p-10 rounded-3xl border-gray-800 shadow-2xl">
+            <form
+              id="contact-form"
+              onSubmit={handleSubmit}
+              className="bg-secondary2 p-8 lg:p-10 rounded-3xl border-gray-800 shadow-2xl"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                   <input 
+                    name="name"
                     type="text" 
                     placeholder="Your Name" 
-                    className="w-full pl-12 pr-4 py-3   border-gray-700 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-white placeholder-gray-600"
+                    value={formData.name}
+                    onChange={handleChange}
+                    autoComplete="name"
+                    required
+                    className={inputClassName}
                   />
                 </div>
                 <div className="relative">
                   <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                   <input 
+                    name="phone"
                     type="tel" 
                     placeholder="Your Phone" 
-                    className="w-full pl-12 pr-4 py-3   border-gray-700 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-white placeholder-gray-600"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    autoComplete="tel"
+                    required
+                    className={inputClassName}
                   />
                 </div>
               </div>
@@ -101,26 +203,46 @@ const Contact: React.FC = () => {
               <div className="relative mb-6">
                 <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" size={20} />
                 <input 
+                  name="email"
                   type="email" 
                   placeholder="Your Email" 
-                  className="w-full pl-12 pr-4 py-3   border-gray-700 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-white placeholder-gray-600"
+                  value={formData.email}
+                  onChange={handleChange}
+                  autoComplete="email"
+                  required
+                  className={inputClassName}
                 />
               </div>
 
               <div className="relative mb-8">
                 <MessageSquare className="absolute left-4 top-6 text-gray-500" size={20} />
                 <textarea 
+                  name="message"
                   rows={5}
                   placeholder="Your Message" 
-                  className="w-full pl-12 pr-4 py-3   border-gray-700 rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all text-white placeholder-gray-600 resize-none"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className={textareaClassName}
                 ></textarea>
               </div>
 
+              {submitStatus && (
+                <p
+                  className={`mb-6 text-sm ${
+                    submitStatus.type === 'success' ? 'text-green-400' : 'text-red-400'
+                  }`}
+                >
+                  {submitStatus.message}
+                </p>
+              )}
+
               <button 
                 type="submit" 
+                disabled={isSubmitting}
                 className="w-full py-3 bg-accent text-primary2 font-bold rounded-xl hover:bg-white transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(190,242,100,0.3)]"
               >
-                Send Message <Send size={20} />
+                {isSubmitting ? 'Sending...' : 'Send Message'} <Send size={20} />
               </button>
             </form>
           </motion.div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { personalInfo } from "../data/portfolio";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,24 +32,24 @@ const Navbar: React.FC = () => {
         px-6 py-4 flex items-center justify-between`}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 text-white font-bold text-xl">
+        <Link to="/" className="flex items-center gap-2 text-white font-bold text-xl">
           <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center">
             <span className="text-black font-bold">A</span>
           </div>
           Arulsiva.
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-8 bg-black/30 px-8 py-3 rounded-full">
           {navItems.map((item) => (
             <li key={item.name}>
-              <a
-                href={item.to}
+              <Link
+                to={{ pathname: "/", hash: item.to }}
                 className="text-gray-300 hover:text-accent font-medium relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -58,7 +59,7 @@ const Navbar: React.FC = () => {
           <a
             href={personalInfo.resumeUrl} 
             target="_blank"
-            className="bg-gradient-to-r from-green-400 to-lime-400 text-black font-semibold px-6 py-3 rounded-full hover:scale-105 transition"
+            className="bg-gradient-to-r from-green-400 to-lime-400 text-primary2 font-semibold px-6 py-3 rounded-full hover:scale-105 transition"
           >
             Download CV
           </a>
@@ -81,19 +82,19 @@ const Navbar: React.FC = () => {
           className="absolute top-[90px] w-[90%] max-w-sm bg-black/80 backdrop-blur-md rounded-2xl p-6 lg:hidden shadow-xl"
         >
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.to}
+              to={{ pathname: "/", hash: item.to }}
               className="block py-3 text-gray-300 hover:text-accent font-medium"
               onClick={() => setIsOpen(false)}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
 
           <a
             href="/cv.pdf"
-            className="block mt-4 text-center bg-gradient-to-r from-green-400 to-lime-400 text-black font-semibold py-3 rounded-full"
+            className="block mt-4 text-center bg-gradient-to-r from-green-400 to-lime-400 text-primary2 font-semibold py-3 rounded-full"
           >
             Download CV
           </a>

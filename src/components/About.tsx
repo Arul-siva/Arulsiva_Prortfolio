@@ -202,7 +202,7 @@ const About: React.FC = () => {
 
               {/* Experience */}
               <div className="bg-secondary2 border border-accent/20 rounded-3xl px-8 py-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-1">2+</div>
+                <div className="text-4xl font-bold text-accent mb-1">3</div>
                 <p className="text-sm text-gray-400">Years Experience</p>
               </div>
             </div>

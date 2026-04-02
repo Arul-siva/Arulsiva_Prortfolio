@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ClientCarousel from './components/ClientCarousel';
@@ -16,11 +16,37 @@ import ProjectDetails from './pages/ProjectDetails';
 import SplashCursor from './components/SplashCursor';
 
 
+function ScrollToSection() {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const sectionId = location.hash.slice(1);
+
+    window.requestAnimationFrame(() => {
+      const section = document.getElementById(sectionId);
+
+      if (!section) {
+        return;
+      }
+
+      const top = section.getBoundingClientRect().top + window.scrollY - 110;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <div className="min-h-screen  text-white font-sans selection:bg-accent selection:text-primary  relative">
       <RainEffect />
       <SplashCursor />
+      <ScrollToSection />
       <Routes>
         <Route path="/" element={
           <main className="relative z-10">

@@ -37,8 +37,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
             <a 
               href={personalInfo.resumeUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
+              download="Arulsiva-Software-Engineer.pdf"
               className="px-8 py-4 bg-accent text-primary2 rounded-full font-bold transition-all hover:bg-white hover:scale-105 flex items-center gap-2 shadow-[0_0_20px_rgba(190,242,100,0.3)]"
             >
               Download CV <Download size={20} />
@@ -79,8 +78,8 @@ const Hero: React.FC = () => {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="absolute bottom-10 -left-10 bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-xl z-20 max-w-xs"
             >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="text-3xl font-bold text-accent">2+</div>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="text-3xl font-bold text-accent">3</div>
                 <div className="text-xs text-gray-300 uppercase tracking-wider">Years of<br/>Experience</div>
               </div>
               <div className="h-1 w-full bg-gray-700 rounded-full overflow-hidden">
