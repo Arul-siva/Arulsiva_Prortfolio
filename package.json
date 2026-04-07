@@ -1,0 +1,50 @@
+{
+  "homepage": "https://arul-siva.github.io/Arulsiva_Prortfolio",
+  "name": "youware-react-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@headlessui/react": "^1.7.19",
+    "bootstrap": "^5.3.3",
+    "cannon-es": "^0.20.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "gsap": "^3.12.8",
+    "i18next": "^23.16.8",
+    "i18next-browser-languagedetector": "^7.2.1",
+    "lucide-react": "^0.460.0",
+    "matter-js": "^0.20.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.3",
+    "react-router-dom": "^6.30.1",
+    "react-use": "^17.5.1",
+    "three": "^0.170.0",
+    "zod": "^3.23.8",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/matter-js": "^0.20.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@youware/vite-plugin-react": "^1.0.3",
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.3",
+    "vite": "^5.4.11"
+  }
+}
