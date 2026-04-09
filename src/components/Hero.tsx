@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <span className="text-gray-300 text-3xl lg:text-5xl">Software Engineer</span>
           </h1>
           
-          <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-lg lg:mx-0">
+          <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-xl lg:mx-0">
             {personalInfo.intro}
           </p>
           

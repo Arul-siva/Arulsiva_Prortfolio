@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { skills } from '../data/portfolio';
 import GradientText from './GradientText';
+import CircularGallery from './CircularGallery ';
 
 const Skills: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Skills: React.FC = () => {
             <span className="text-accent font-medium uppercase tracking-wider text-sm">My Skills</span>
           </div>
           <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight max-w-2xl">
-            <GradientText text="My key skills for crafting efficient and user-friendly websites." />
+            <GradientText text="My key skills for crafting polished and intuitive websites." />
           </h2>
         </motion.div>
 
@@ -42,9 +43,9 @@ const Skills: React.FC = () => {
                   <p className="text-xs text-gray-500">Professional Tool</p>
                 </div>
               </div>
-              <div className="text-2xl font-bold text-accent">
+              {/* <div className="text-2xl font-bold text-accent">
                 {skill.level}%
-              </div>
+              </div> */}
             </motion.div>
           ))}
         </div>

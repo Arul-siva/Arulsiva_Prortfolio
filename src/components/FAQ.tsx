@@ -7,22 +7,22 @@ const FAQ = () => {
     {
       id: 1,
       question: "How much notice period do you have?",
-      answer: "My notice period is [45 days / immediate / negotiable]. I’m flexible and open to discussion based on the company’s requirements."
+      answer: "My notice period is 30 days / immediate. I'm flexible and open to discussion based on the company's requirements."
     },
     {
       id: 2,
       question: "What is your current CTC / salary expectation?",
-      answer: "My current CTC is ₹3LPA, and my expected CTC is ₹6LPA, which is negotiable based on the role, responsibilities, and overall compensation structure."
+      answer: "My current CTC is ₹3.6LPA, and my expected CTC is ₹6LPA, which is negotiable based on the role, responsibilities, and overall compensation structure."
     },
     {
       id: 3,
       question: " Are you open to relocation or remote work?",
-      answer: "Yes, I’m open to remote / hybrid / relocation opportunities, depending on the role and company culture."
+      answer: "Yes, I'm open to remote / hybrid / relocation opportunities, depending on the role and company culture."
     },
     {
       id: 4,
       question: " What is your availability for interviews?",
-      answer: "I’m generally available on weekdays and can adjust my schedule with prior notice to accommodate interview timings."
+      answer: "I'm generally available on weekdays and can adjust my schedule with prior notice to accommodate interview timings."
     },
     {
       id: 5,
@@ -32,7 +32,7 @@ const FAQ = () => {
     {
       id:6,
       question: "What technologies do you work with?",
-      answer: "I work with modern web technologies including HTML, CSS, JavaScript, and frameworks/libraries such as React / Next.js / Node.js (adjust based on your stack). I also have experience with APIs, databases, version control (Git), and deployment workflows."
+      answer: "I work with modern web technologies including HTML, CSS, JavaScript, and frameworks or libraries such as React / Next.js / Node.js (adjust based on your stack). I also have experience with APIs, databases, version control (Git), and deployment workflows."
     }
   ];
 
@@ -81,7 +81,7 @@ const FAQ = () => {
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 bg-accent rounded-full"></div>
-                <span className="text-accent font-medium">Have Questions? I’ve Got Answers</span>
+                <span className="text-accent font-medium">Have Questions? I've Got Answers</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
                Details about my role, 

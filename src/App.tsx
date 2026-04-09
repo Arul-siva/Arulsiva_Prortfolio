@@ -5,12 +5,12 @@ import Hero from './components/Hero';
 import ClientCarousel from './components/ClientCarousel';
 import Specialization from './components/Specialization';
 import About from './components/About';
+import Education from './components/Education';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
-import CursorFollower from './components/CursorFollower';
 import RainEffect from './components/RainEffect';
 import ProjectDetails from './pages/ProjectDetails';
 import SplashCursor from './components/SplashCursor';
@@ -55,6 +55,7 @@ function App() {
             <ClientCarousel />
             <Specialization />
             <About />
+            <Education />
             <Experience />
             <Skills />
             <Projects />

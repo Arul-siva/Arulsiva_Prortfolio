@@ -117,10 +117,10 @@ const Projects: React.FC = () => {
             ))}
           </motion.div>
           
-          <div className="mt-8 flex justify-center gap-2 text-gray-500 text-sm">
+          {/* <div className="mt-8 flex justify-center gap-2 text-gray-500 text-sm">
             <span>Use arrows or swipe to explore</span>
             <ArrowRight size={16} />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

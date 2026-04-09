@@ -8,7 +8,7 @@ const Specialization: React.FC = () => {
     { id: "01", title: "Web Application Development", icon: Smartphone, description: "Building complete web applications with structured architecture and clear data flow." },
     { id: "02", title: "Component-Based UI Development", icon: Layout, description: "Creating reusable, modular UI components for consistent and maintainable interfaces." },
     { id: "03", title: " API Development & Integration", icon: Diamond, description: "Developing and integrating RESTful APIs for seamless communication between systems." },
-    { id: "04", title: "Application Performance Optimization", icon: Activity, description: "Improving load times and runtime efficiency through code and logic optimization." },
+    { id: "04", title: "Application Performance Optimization", icon: Activity, description: "Improving load times and runtime speed through code and logic optimization." },
     { id: "05", title: "Error Handling & Debugging", icon: Monitor, description: "Identifying issues quickly and implementing reliable error handling mechanisms." },
     { id: "06", title: "Version Control & Collaboration", icon: Database, description: "Working with version control systems to manage code changes effectively." }
   ];
@@ -38,11 +38,11 @@ const Specialization: React.FC = () => {
               <span className="text-accent font-medium uppercase tracking-wider text-sm">My Specialization</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
-              <GradientText text="Innovative best design and development services" />
+              <GradientText text="Innovative best design and development" />
             </h2>
           </motion.div>
           
-          <motion.div 
+          {/* <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -55,9 +55,9 @@ const Specialization: React.FC = () => {
             <a href="#contact" className="px-6 py-3 bg-accent text-primary2 font-bold rounded-full hover:bg-white transition-colors inline-block">
               View All Services
             </a>
-          </motion.div>
+          </motion.div> */}
         </div>
-
+    
         <motion.div 
           ref={carouselRef} 
           className="cursor-grab active:cursor-grabbing overflow-hidden"
@@ -91,6 +91,8 @@ const Specialization: React.FC = () => {
                 </div>
               </motion.div>
             ))}
+
+          
           </motion.div>
         </motion.div>
         

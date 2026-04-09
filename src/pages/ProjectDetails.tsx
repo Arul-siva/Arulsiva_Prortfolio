@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Calendar, User, Tag, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, User, Tag, ArrowRight, Layers3 } from 'lucide-react';
 import { projects } from '../data/portfolio';
 import Navbar from '../components/Navbar';
 import GradientText from '../components/GradientText';
-import CursorFollower from '../components/CursorFollower';
 
 const ProjectDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -34,7 +33,6 @@ const ProjectDetails: React.FC = () => {
 
   return (
     <div className="min-h-screen text-white selection:bg-accent selection:text-dark">
-      <CursorFollower />
       <Navbar />
       
       <main className="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
@@ -60,6 +58,34 @@ const ProjectDetails: React.FC = () => {
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
             />
           </div>
+
+          {project.stack && (
+            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-6 md:p-8 shadow-[0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-sm">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(240,255,108,0.12),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(107,253,217,0.16),transparent_35%)]" />
+              <div className="relative z-10">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-accent/30 bg-accent/10 text-accent">
+                    <Layers3 size={22} />
+                  </div>
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.28em] text-accent/90">Project Stack</p>
+                    <h2 className="text-xl font-bold text-white md:text-2xl">Technologies used in this project</h2>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-accent/20 bg-white/5 px-5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-[0_0_18px_rgba(190,242,100,0.08)] transition hover:-translate-y-0.5 hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Content Grid */}
