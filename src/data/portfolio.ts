@@ -8,7 +8,8 @@ export const personalInfo = {
   name: "Arulsiva",
   role: "Software Engineer",
   intro:
-    "I'm a software engineer specializing in creating robust, high-speed web applications across the frontend and backend. I focus on writing clean, maintainable code and delivering solutions that solve real-world problems.",
+    "I'm a software engineer specializing in creating robust, high-speed web applications across the frontend and backend. I leverage AI-powered development tools like Cursor, GitHub Copilot, and Claude to accelerate code delivery while maintaining clean, maintainable solutions that solve real-world problems.",
+    //  "I'm a software engineer specializing in creating robust, high-speed web applications across the frontend and backend. I focus on writing clean, maintainable code and delivering solutions that solve real-world problems.",
   resumeUrl: resumePdf,
   profileImage:
     "https://arulsiva-prortfolio.vercel.app/static/media/my%20profile%20pic.64077449059229659831.jpg",
@@ -41,6 +42,7 @@ export const experience = [
     description: [
       "Worked on 3+ large-scale web applications, including hotel and golf course booking systems and EdTech products.",
       "Engineered and maintained applications using Laravel (PHP) for backend services and React with Redux for frontend state management.",
+      // "Accelerated development velocity by 40% using AI-powered tools (Cursor, GitHub Copilot, Claude) for code generation, debugging, and refactoring while maintaining code quality standards.",
       "Refined booking workflows covering availability, pricing, reservations, currency conversion, and quiz-based modules for global users.",
       "Used SVN version control for code merging, conflict resolution, and maintaining stable, high-quality codebases."
     ],
@@ -55,6 +57,7 @@ export const experience = [
     description: [
       "Created adaptive, high-speed websites using HTML, CSS, JavaScript, React.js, and PHP to deliver user-focused web experiences.",
       "Integrated REST APIs and optimized front-end speed, achieving up to 60% reduction in load time.",
+      // "Leveraged AI development tools (Cursor, GitHub Copilot, Codex) to streamline code writing, automate repetitive tasks, and accelerate project delivery timelines.",
       "Improved UI stability, flexibility across screen sizes, and speed through DOM manipulation, debugging, and code optimization.",
       "Completed projects across e-commerce, business, and WordPress domains with 90%+ client satisfaction.",
       "Collaborated with team members and clients to gather requirements and deliver high-quality projects on time."
@@ -76,18 +79,23 @@ export const education = [
 ];
 
 export const skills = [
-  { name: "React.js", level: 90, icon: "https://arulsiva-prortfolio.vercel.app/static/media/react.2b6a071759fcdac074f4dcad26eef347.svg" },
-  { name: "Laravel", level: 85, icon: "https://arulsiva-prortfolio.vercel.app/static/media/laravel-2.ba995bd47e3a7cc141cc1c9aaa1ac583.svg" },
-  { name: "Node.js", level: 80, icon: "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" },
-  { name: "PHP", level: 85, icon: "https://arulsiva-prortfolio.vercel.app/static/media/PHP-logo.svg.42409eafdcf3870796b7.png" },
-  { name: "MongoDB", level: 75, icon: "https://arulsiva-prortfolio.vercel.app/static/media/mongodb.6c6da70249bd055e32474d63755dd3db.svg" },
-  { name: "MySQL", level: 80, icon: "https://arulsiva-prortfolio.vercel.app/static/media/mysql.f9e45d29a8d636bf8f78c9c346b7a7ce.svg" },
-  { name: "JavaScript", level: 90, icon: "https://arulsiva-prortfolio.vercel.app/static/media/javascript.e9360603cdd412c8f9acb925313bc3f3.svg" },
-  { name: "HTML5", level: 95, icon: "https://arulsiva-prortfolio.vercel.app/static/media/html.6a342d61e4fe710cf3e5c05b65b0ac87.svg" },
-  { name: "CSS3", level: 90, icon: "https://arulsiva-prortfolio.vercel.app/static/media/css.43b6f4bdbc0f36b9f2dd15c6ebbcea15.svg" },
-  { name: "Bootstrap", level: 85, icon: "https://arulsiva-prortfolio.vercel.app/static/media/bootstrap.19a2d2ff74985cbf49a1aed7fb4d5401.svg" },
-  { name: "Git", level: 85, icon: "https://arulsiva-prortfolio.vercel.app/static/media/git.a0b8447eefa4cd939642f1017ee1c962.svg" },
-  { name: "Figma", level: 70, icon: "https://arulsiva-prortfolio.vercel.app/static/media/figma.1cd446080336901b93673164fe5bdcf2.svg" }
+  { name: "React.js", level: 90, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/react.2b6a071759fcdac074f4dcad26eef347.svg" },
+  { name: "Laravel", level: 85, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/laravel-2.ba995bd47e3a7cc141cc1c9aaa1ac583.svg" },
+  { name: "Node.js", level: 80, category: "tech", icon: "https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" },
+  { name: "PHP", level: 85, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/PHP-logo.svg.42409eafdcf3870796b7.png" },
+  { name: "MongoDB", level: 75, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/mongodb.6c6da70249bd055e32474d63755dd3db.svg" },
+  { name: "MySQL", level: 80, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/mysql.f9e45d29a8d636bf8f78c9c346b7a7ce.svg" },
+  { name: "JavaScript", level: 90, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/javascript.e9360603cdd412c8f9acb925313bc3f3.svg" },
+  { name: "HTML5", level: 95, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/html.6a342d61e4fe710cf3e5c05b65b0ac87.svg" },
+  { name: "CSS3", level: 90, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/css.43b6f4bdbc0f36b9f2dd15c6ebbcea15.svg" },
+  { name: "Bootstrap", level: 85, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/bootstrap.19a2d2ff74985cbf49a1aed7fb4d5401.svg" },
+  { name: "Git", level: 85, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/git.a0b8447eefa4cd939642f1017ee1c962.svg" },
+  { name: "Figma", level: 70, category: "tech", icon: "https://arulsiva-prortfolio.vercel.app/static/media/figma.1cd446080336901b93673164fe5bdcf2.svg" },
+  { name: "GitHub Copilot", level: 90, category: "ai", icon: "https://github.githubassets.com/images/modules/site/copilot/copilot.png" },
+  { name: "Cursor AI", level: 85, category: "ai", icon: "https://www.cursor.com/brand/icon.svg" },
+  { name: "OpenAI Codex", level: 80, category: "ai", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSAtx3kZQWfmO0e-tg7tJnSujvKYRk4s1PVw&s" },
+  { name: "Antigravity", level: 75, category: "ai", icon: "https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png" },
+  { name: "Claude", level: 85, category: "ai", icon: "https://media.licdn.com/dms/image/v2/D4E0BAQFko-zWIZk_pw/company-logo_200_200/B4EZhiRWKvHgAI-/0/1753995371543/claude_logo?e=2147483647&v=beta&t=CVNmFKyWig0Uo78oAr3II6KVLu_o0aXPtnt4S6XgOr8" },
 ];
 
 export const projects = [

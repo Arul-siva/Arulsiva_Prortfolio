@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Database, Layout, Diamond, Activity, Smartphone, Monitor, PenTool, BarChart } from 'lucide-react';
+import { ArrowUpRight, Database, Layout, Diamond, Activity, Smartphone, Monitor, PenTool, BarChart, ChevronLeft, ChevronRight } from 'lucide-react';
 import GradientText from './GradientText';
 
 const Specialization: React.FC = () => {
@@ -22,6 +22,16 @@ const Specialization: React.FC = () => {
     }
   }, []);
 
+  const scroll = (direction: 'left' | 'right') => {
+    if (carouselRef.current) {
+      const scrollAmount = 370;
+      carouselRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="py-24   relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
@@ -34,11 +44,11 @@ const Specialization: React.FC = () => {
             className="lg:w-1/2"
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-accent rounded-full"></div>
-              <span className="text-accent font-medium uppercase tracking-wider text-sm">My Specialization</span>
+              {/* <div className="w-2 h-2 bg-accent rounded-full"></div> */}
+              <span className="text-accent font-medium uppercase tracking-wider text-sm"></span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-white leading-tight">
-              <GradientText text="Innovative best design and development" />
+              <GradientText text="What I Do" />
             </h2>
           </motion.div>
           
@@ -58,16 +68,31 @@ const Specialization: React.FC = () => {
           </motion.div> */}
         </div>
     
-        <motion.div 
-          ref={carouselRef} 
-          className="cursor-grab active:cursor-grabbing overflow-hidden"
-          whileTap={{ cursor: "grabbing" }}
-        >
-          <motion.div 
-            drag="x" 
-            dragConstraints={{ right: 0, left: -width }}
-            className="flex gap-8"
+        <div className="relative">
+          {/* <button
+            onClick={() => scroll('left')}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary2 hover:bg-white transition-colors"
           >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <button
+            onClick={() => scroll('right')}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary2 hover:bg-white transition-colors"
+          >
+            <ChevronRight size={24} /> */}
+          {/* </button> */}
+
+          <motion.div 
+            ref={carouselRef} 
+            className="cursor-grab active:cursor-grabbing overflow-hidden"
+            whileTap={{ cursor: "grabbing" }}
+          >
+            <motion.div 
+              drag="x" 
+              dragConstraints={{ right: 0, left: -width }}
+              className="flex gap-8"
+            >
             {services.map((service, index) => (
               <motion.div 
                 key={service.id}
@@ -92,9 +117,9 @@ const Specialization: React.FC = () => {
               </motion.div>
             ))}
 
-          
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
         
         {/* Carousel Indicators */}
         <div className="flex justify-center mt-12 gap-2">

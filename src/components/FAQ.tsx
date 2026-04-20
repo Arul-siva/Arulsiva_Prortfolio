@@ -33,7 +33,12 @@ const FAQ = () => {
       id:6,
       question: "What technologies do you work with?",
       answer: "I work with modern web technologies including HTML, CSS, JavaScript, and frameworks or libraries such as React / Next.js / Node.js (adjust based on your stack). I also have experience with APIs, databases, version control (Git), and deployment workflows."
-    }
+    },
+    {
+    id: 7,
+    question: "What AI tools do you use?",
+    answer: "I use modern AI-powered development tools such as Zencoder, Codex, Amazon Q, Claude, Antigravity and other AI assistants. These tools help me write code faster, reduce development time, improve code quality, and speed up debugging and problem-solving."
+  }
   ];
 
   const toggleQuestion = (id: number) => {

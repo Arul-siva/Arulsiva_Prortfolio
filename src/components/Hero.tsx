@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
           <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
             <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
             <span className="text-accent font-medium tracking-wider text-sm uppercase">Your Vision, My Clean Code.
-</span>
+            </span>
           </div>
           
           <h1 className="text-4xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             <span className="text-gray-300 text-3xl lg:text-5xl">Software Engineer</span>
           </h1>
           
-          <p className="text-gray-400 text-lg mb-10 leading-relaxed max-w-xl lg:mx-0">
+          <p className="text-gray-400 text-base mb-10 leading-relaxed max-w-xl lg:mx-0 font-display fst-italic">
             {personalInfo.intro}
           </p>
           
@@ -60,16 +60,17 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="lg:w-1/2 flex justify-center lg:justify-end relative"
         >
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[550px] lg:h-[650px]">
+          <div className="relative w-72 h-100 sm:w-96 sm:h-96 lg:w-[550px] lg:h-[650px]">
             {/* Abstract Shape Background */}
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full text-secondary fill-current transform scale-110 -z-10">
+            {/* <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full text-secondary fill-current transform scale-110 -z-10">
               <path d="M44.7,-76.4C58.9,-69.2,71.8,-59.1,81.6,-46.6C91.4,-34.1,98.1,-19.2,95.8,-5.3C93.5,8.6,82.2,21.5,70.6,32.2C59,42.9,47.1,51.4,34.8,58.3C22.5,65.2,9.8,70.5,-3.4,76.4C-16.6,82.3,-30.3,88.8,-42.2,84.6C-54.1,80.4,-64.2,65.5,-72.1,50.2C-80,34.9,-85.7,19.2,-84.6,4.1C-83.5,-11,-75.6,-25.5,-65.4,-37.6C-55.2,-49.7,-42.7,-59.4,-29.8,-67.3C-16.9,-75.2,-3.6,-81.3,10.2,-80.9C24,-80.5,30.5,-83.6,44.7,-76.4Z" transform="translate(100 100)" />
-            </svg>
+            </svg> */}
             
             <img 
               src={personalInfo.heroImage} 
-              alt="Hero" 
-              className="relative w-full h-full object-cover rounded-[3rem] shadow-2xl z-10 grayscale hover:grayscale-0 transition-all duration-500"
+              alt="Hero"
+              width={'90%'} 
+              className="relative  h-full object-cover rounded-[3rem] shadow-2xl z-10 grayscale hover:grayscale-0 transition-all duration-500"
             />
             
             {/* Floating Card */}
@@ -78,10 +79,12 @@ const Hero: React.FC = () => {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
               className="absolute bottom-10 -left-10 bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-xl z-20 max-w-xs"
             >
-              <div className="flex items-center gap-2 mb-2">
+               <a href="#experience"> 
+               <div className="flex items-center gap-2 mb-2">
                 <div className="text-3xl font-bold text-accent">3</div>
                 <div className="text-xs text-gray-300 uppercase tracking-wider">Years of<br/>Experience</div>
               </div>
+                </a>
               <div className="h-1 w-full bg-gray-700 rounded-full overflow-hidden">
                 <div className="h-full bg-accent w-3/4"></div>
               </div> 

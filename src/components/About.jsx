@@ -7,9 +7,8 @@ import { education } from "../data/portfolio";
 import about_img from "../../images/about_img.png";
 import certificate from "../../images/Prompt engineering certificate.pdf";
 
-const About: React.FC = () => {
-
- const [isModalOpen, setIsModalOpen] = useState(false);
+const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="about" className="relative py-28 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
@@ -72,7 +71,7 @@ const About: React.FC = () => {
 
             <div className="relative pl-6 mb-10">
               <span className="absolute left-0 top-1 w-[3px] h-full bg-accent"></span>
-              <p className="text-sm lg:text-xl text-gray-300 font-medium leading-relaxed">
+              <p className="text-xl lg:text-2xl text-gray-300 font-medium leading-relaxed">
                 BUILDING. SOLVING. EVOLVING — THROUGH CODE
               </p>
             </div>
@@ -223,9 +222,8 @@ const About: React.FC = () => {
                 </div>
               </div>
               <div className="flex-1 bg-secondary2 border border-accent/20 rounded-3xl px-8 py-6 text-center">
-               <a href="#experience"> 
                 <div className="text-4xl font-bold text-accent mb-1">3</div>
-                <p className="text-sm text-gray-400">Years Experience</p></a>
+                <p className="text-sm text-gray-400">Years Experience</p>
               </div>
             </div>
           </motion.div>
